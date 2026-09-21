@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Cantera — Manual de Marca</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --forest: #1a2e1a;
+        --ivory: #f5f0e8;
+        --gold: #c9a84c;
+        --night: #111111;
+        --ink: #1c1c1c;
+        --mist: #6b6b63;
+        --stone: #cfc9bd;
+        --font-display: 'Bebas Neue', sans-serif;
+        --font-body: 'Inter', system-ui, sans-serif;
+        --font-mono: 'JetBrains Mono', monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--ivory);
+        color: var(--ink);
+        font-family: var(--font-body);
+        line-height: 1.6;
+      }
+
+      img,
+      svg {
+        max-width: 100%;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: var(--font-display);
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        margin: 0;
+        line-height: 1.15;
+      }
+
+      .wrap {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      .eyebrow {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--gold);
+      }
+
+      .eyebrow--dark {
+        color: #8a7333;
+      }
+
+      section {
+        padding: 4rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      /* Hero */
+      .hero {
+        background: var(--forest);
+        color: var(--ivory);
+        padding: 5rem 0 4rem;
+        border-bottom: none;
+      }
+
+      .hero .eyebrow {
+        color: var(--gold);
+      }
+
+      .hero .mark {
+        width: 4rem;
+        height: 4rem;
+        color: var(--gold);
+        margin: 1.5rem 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+      }
+
+      .hero p {
+        max-width: 42ch;
+        margin-top: 1rem;
+        color: rgba(245, 240, 232, 0.75);
+      }
+
+      .badge {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 0.35rem 0.75rem;
+        border: 1px solid var(--gold);
+        color: var(--gold);
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      /* Concept */
+      .concept p {
+        max-width: 62ch;
+      }
+
+      .concept p + p {
+        margin-top: 1rem;
+      }
+
+      /* Symbol showcase */
+      .showcase {
+        margin-top: 2.5rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+      }
+
+      .surface {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 220px;
+        border-radius: 4px;
+        padding: 2rem;
+      }
+
+      .surface--ivory {
+        background: var(--ivory);
+        border: 1px solid var(--stone);
+        color: var(--forest);
+      }
+
+      .surface--forest {
+        background: var(--forest);
+        color: var(--ivory);
+      }
+
+      .surface--night {
+        background: var(--night);
+        color: var(--ivory);
+      }
+
+      .surface--gold-accent {
+        background: var(--forest);
+        color: var(--gold);
+      }
+
+      .surface-label {
+        position: relative;
+      }
+
+      .surface-label::after {
+        content: attr(data-label);
+        position: absolute;
+        bottom: -1.75rem;
+        left: 0;
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--mist);
+      }
+
+      @media (min-width: 720px) {
+        .showcase {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* Lockup */
+      .lockup {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .lockup--stacked {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .lockup .mark {
+        width: 3.5rem;
+        height: 3.5rem;
+        flex-shrink: 0;
+      }
+
+      .lockup-word {
+        font-family: var(--font-display);
+        font-size: 1.75rem;
+        letter-spacing: 0.03em;
+      }
+
+      .lockup-rule {
+        display: block;
+        width: 3rem;
+        height: 1px;
+        background: var(--gold);
+        margin: 0.4rem 0;
+      }
+
+      .lockup-london {
+        font-size: 0.7rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        opacity: 0.75;
+      }
+
+      /* Meanings */
+      .meanings {
+        margin-top: 2.5rem;
+        display: grid;
+        gap: 1px;
+        background: var(--stone);
+        grid-template-columns: 1fr;
+      }
+
+      .meanings article {
+        background: var(--ivory);
+        padding: 1.5rem;
+      }
+
+      .meanings h3 {
+        font-size: 1.4rem;
+        color: var(--forest);
+      }
+
+      .meanings p {
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--mist);
+      }
+
+      @media (min-width: 720px) {
+        .meanings {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* Palette */
+      .palette {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+        margin-top: 2rem;
+      }
+
+      .swatch {
+        padding: 1.5rem;
+        border-radius: 4px;
+      }
+
+      .swatch p:first-child {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+      }
+
+      .swatch p:last-child {
+        margin-top: 0.25rem;
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        opacity: 0.8;
+      }
+
+      @media (min-width: 720px) {
+        .palette {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* Type */
+      .type-grid {
+        display: grid;
+        gap: 2rem;
+        margin-top: 2rem;
+        grid-template-columns: 1fr;
+      }
+
+      .type-label {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--mist);
+      }
+
+      @media (min-width: 720px) {
+        .type-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* Min sizes */
+      .sizes {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: flex-end;
+        color: var(--forest);
+      }
+
+      .sizes div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .sizes span {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--mist);
+      }
+
+      /* Rules list */
+      ul.rules {
+        margin: 2rem 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+        font-size: 0.9rem;
+        color: var(--mist);
+      }
+
+      ul.rules li {
+        border-top: 1px solid var(--stone);
+        padding-top: 1rem;
+      }
+
+      @media (min-width: 720px) {
+        ul.rules {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      footer {
+        background: var(--forest);
+        color: var(--ivory);
+        padding: 3rem 0;
+        text-align: center;
+      }
+
+      footer p {
+        margin-top: 1rem;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--gold);
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-top: 2rem;
+        color: var(--ivory);
+        opacity: 0.75;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="mark-cortada" viewBox="0 0 100 100">
+          <path
+            d="M94.433 61.906 L82.527 82.527 L61.906 94.433 L38.094 94.433 L17.473 82.527 L5.567 61.906 L5.567 38.094 L17.473 17.473 L38.094 5.567 L61.906 5.567 L82.527 17.473 L94.433 38.094 L73.18 40.635 A25 25 0 1 0 73.18 59.365 Z"
+          />
+        </symbol>
+      </defs>
+    </svg>
+
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Identidad visual · Propuesta 01 · Recomendada</p>
+        <svg class="mark" fill="currentColor"><use href="#mark-cortada" /></svg>
+        <h1>El talento<br />toma forma.</h1>
+        <p>
+          Una C tallada, abierta hacia adelante. Sólida como el proceso. Lista para el pecho de un
+          jugador y para una ficha de scout.
+        </p>
+        <span class="badge">01 · Cortada</span>
+      </div>
+    </section>
+
+    <section class="concept">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--dark">El concepto</p>
+        <h2 style="margin-top: 0.75rem; color: var(--forest); font-size: 2rem">
+          The process is the promise.
+        </h2>
+        <div style="margin-top: 1.5rem">
+          <p>
+            La Cantera no es una academia ni una agencia. Es el trabajo que convierte potencial en
+            oportunidad. El logo tiene que decir eso sin explicarlo: una forma compacta, geométrica,
+            con cortes precisos y una apertura a la derecha.
+          </p>
+          <p>
+            Tres lecturas, un solo símbolo. La forma sólida es el entrenamiento. Los cortes son el
+            trabajo continuo. La apertura son las puertas que ese proceso abre. No hace falta conocer
+            la metáfora para reconocerlo.
+          </p>
+          <p>
+            Nada de balones, coronas, laureles, siluetas ni monumentos londinenses. El nombre se
+            escribe completo: LA CANTERA, con LONDON como anclaje, no como traducción.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <p class="eyebrow eyebrow--dark">01 · Cortada</p>
+        <h2 style="margin-top: 0.5rem; color: var(--forest); font-size: 2.25rem">Símbolo</h2>
+        <p style="margin-top: 0.5rem; max-width: 60ch; color: var(--mist)">
+          El contorno es el trabajo. Doce cortes. Un interior amplio. Apertura al este. Un símbolo
+          circular, pero no un círculo: el perímetro está facetado como un bloque tallado. El
+          contraforma es un círculo perfecto — el potencial que el proceso protege. La faceta derecha
+          se retira: la salida, la proyección.
+        </p>
+
+        <div class="showcase">
+          <div class="surface surface--ivory surface-label" data-label="Marca">
+            <span class="lockup">
+              <svg class="mark" fill="currentColor"><use href="#mark-cortada" /></svg>
+              <span>
+                <span class="lockup-word">LA CANTERA</span>
+                <span class="lockup-rule"></span>
+                <span class="lockup-london">London</span>
+              </span>
+            </span>
+          </div>
+          <div class="surface surface--forest surface-label" data-label="Inversa">
+            <span class="lockup">
+              <svg class="mark" fill="currentColor"><use href="#mark-cortada" /></svg>
+              <span>
+                <span class="lockup-word">LA CANTERA</span>
+                <span class="lockup-rule"></span>
+                <span class="lockup-london">London</span>
+              </span>
+            </span>
+          </div>
+          <div class="surface surface--night surface-label" data-label="Nocturna">
+            <svg class="mark" style="width: 4rem; height: 4rem" fill="currentColor">
+              <use href="#mark-cortada" />
+            </svg>
+          </div>
+          <div class="surface surface--gold-accent surface-label" data-label="Acento">
+            <svg class="mark" style="width: 4rem; height: 4rem" fill="currentColor">
+              <use href="#mark-cortada" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="meanings">
+          <article>
+            <h3>Forma sólida</h3>
+            <p>
+              Masa suficiente para bordar en una camiseta y para leerse a 16 píxeles. Disciplina,
+              experiencia, cancha.
+            </p>
+          </article>
+          <article>
+            <h3>Los cortes</h3>
+            <p>Doce facetas precisas. El trabajo continuo hecho geometría. Sin texturas de piedra, sin 3D.</p>
+          </article>
+          <article>
+            <h3>La apertura</h3>
+            <p>
+              Hacia la derecha. El jugador sale. Las puertas se abren. Nosotros no caminamos por
+              ellas: las sostenemos.
+            </p>
+          </article>
+        </div>
+
+        <p class="eyebrow eyebrow--dark" style="margin-top: 3rem">Escala mínima</p>
+        <div class="sizes">
+          <div>
+            <svg style="width: 96px; height: 96px" fill="currentColor"><use href="#mark-cortada" /></svg>
+            <span>96 px</span>
+          </div>
+          <div>
+            <svg style="width: 56px; height: 56px" fill="currentColor"><use href="#mark-cortada" /></svg>
+            <span>56 px</span>
+          </div>
+          <div>
+            <svg style="width: 32px; height: 32px" fill="currentColor"><use href="#mark-cortada" /></svg>
+            <span>32 px</span>
+          </div>
+          <div>
+            <svg style="width: 20px; height: 20px" fill="currentColor"><use href="#mark-cortada" /></svg>
+            <span>20 px</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <p class="eyebrow eyebrow--dark">Color</p>
+        <h2 style="margin-top: 0.5rem; color: var(--forest); font-size: 2.25rem">Paleta</h2>
+        <div class="palette">
+          <div class="swatch" style="background: var(--forest); color: var(--ivory)">
+            <p>Forest</p>
+            <p>#1A2E1A</p>
+          </div>
+          <div class="swatch" style="background: var(--ivory); color: var(--ink); border: 1px solid var(--stone)">
+            <p>Ivory</p>
+            <p>#F5F0E8</p>
+          </div>
+          <div class="swatch" style="background: var(--gold); color: var(--forest)">
+            <p>Gold</p>
+            <p>#C9A84C</p>
+          </div>
+        </div>
+        <ul class="rules">
+          <li>Una sola tinta: verde sobre marfil, o marfil sobre verde.</li>
+          <li>El oro se usa en la línea del lockup y en acentos, nunca como degradado.</li>
+          <li>LA CANTERA siempre completo, en mayúsculas. London debajo, no al lado.</li>
+          <li>El tagline vive separado: The process is the promise.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section style="border-bottom: none">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--dark">Tipografía</p>
+        <div class="type-grid">
+          <div>
+            <p class="type-label">Display</p>
+            <p style="margin-top: 0.5rem; font-family: var(--font-display); font-size: 2rem; color: var(--forest)">
+              BEBAS NEUE
+            </p>
+            <p style="margin-top: 0.25rem; font-size: 0.85rem; color: var(--mist)">
+              Titulares cortos. Peso único. Autoridad deportiva sin juvenilidad.
+            </p>
+          </div>
+          <div>
+            <p class="type-label">Body</p>
+            <p style="margin-top: 0.5rem; font-size: 1.5rem; font-weight: 500; color: var(--forest)">Inter</p>
+            <p style="margin-top: 0.25rem; font-size: 0.85rem; color: var(--mist)">
+              Lectura en móvil. Neutral, precisa, al servicio de las familias.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <span class="lockup lockup--stacked">
+          <svg class="mark" fill="currentColor"><use href="#mark-cortada" /></svg>
+          <span>
+            <span class="lockup-word">LA CANTERA</span>
+            <span class="lockup-rule" style="margin-left: auto; margin-right: auto"></span>
+            <span class="lockup-london">London</span>
+          </span>
+        </span>
+        <p>The process is the promise.</p>
+        <a class="back-link" href="/">&larr; Volver al sitio</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -38,3 +38,12 @@ Real photos already placed (`public/images/`, resized/compressed with `sharp`, ~
 - `trophy-1.jpeg`, `trophy-2.jpeg`, `trophy-3-la-cantera.jpeg` — "Championships We've Won" gallery in Why La Cantera
 
 Two supplied training photos showing minors (girls' team drill, coach with two kids) were deliberately **not** used — no confirmed parental image-consent for public use. Check with the client before adding any photo with a minor's face.
+
+## Brand
+
+Logo mark is the "Cortada" symbol (Proposal 01 — the recommended one — from the client's two-proposal brand manual; Proposal 02 "Bloque" was explicitly rejected and is not used anywhere). Same SVG path is embedded inline (fill uses `currentColor` so it follows the surrounding text color) in three places:
+- `index.html` navbar logo and footer logo (both dark backgrounds, mark renders ivory)
+- `public/logos/la-cantera-mark.svg` — standalone asset, forest-green fill, for use on light backgrounds
+- `public/favicon.svg` — forest square with the gold mark, linked from `<head>`
+
+`public/brand-manual/index.html` is a standalone static reference page (not part of the Vite SPA bundle — plain HTML/CSS with its own `<style>` block, self-contained) documenting only Proposal 01: concept, symbol on 4 surfaces, meanings, minimum sizes, color palette, typography. Served at `/brand-manual/` once deployed. Update it by hand if the brand system changes — it doesn't share code with the main site.
