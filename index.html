@@ -1,13 +1,288 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>La Cantera London F.C.</title>
+    <title>La Cantera London F.C. — Train. Develop. Connect.</title>
+    <meta
+      name="description"
+      content="Training, development and international scouting for serious players. La Cantera London F.C."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <header class="navbar" id="navbar">
+      <div class="navbar__inner">
+        <a class="navbar__logo" href="#top">La Cantera</a>
+        <button
+          class="navbar__toggle"
+          id="navToggle"
+          aria-expanded="false"
+          aria-controls="navMenu"
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="navbar__menu" id="navMenu">
+          <a href="#top">Home</a>
+          <a href="#training">Training</a>
+          <a href="#journey">Player Development</a>
+          <a href="#scouting">Scouting</a>
+          <a href="#why">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1. Hero -->
+      <section class="hero" id="top">
+        <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="/images/hero-poster.jpg"
+        >
+          <source src="/videos/hero-training.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+          <h1 class="hero__headline">Develop Your Game. Open New Opportunities.</h1>
+          <p class="hero__subheadline">
+            Training, development and international scouting for serious players.
+          </p>
+          <div class="hero__ctas">
+            <a class="btn btn--filled" href="#contact">Book a Training</a>
+            <a class="btn btn--ghost" href="#contact">Talk to us</a>
+          </div>
+        </div>
+        <a class="hero__scroll" href="#training" aria-label="Scroll to next section">↓</a>
+      </section>
+
+      <!-- 2. Training -->
+      <section class="training" id="training">
+        <h2 class="section-title">What We Train</h2>
+        <div class="training__grid">
+          <article class="training__card">
+            <div class="placeholder-media" aria-hidden="true">[Photo — technical session]</div>
+            <h3>Individual Technique</h3>
+            <p>Ball control, first touch and finishing under real match pressure.</p>
+          </article>
+          <article class="training__card">
+            <div class="placeholder-media" aria-hidden="true">[Photo — tactical session]</div>
+            <h3>Positional Tactics</h3>
+            <p>Reading the game, decision-making and understanding your role on the pitch.</p>
+          </article>
+          <article class="training__card">
+            <div class="placeholder-media" aria-hidden="true">[Photo — physical session]</div>
+            <h3>Physical Performance</h3>
+            <p>Strength, speed and recovery built for the demands of the modern game.</p>
+          </article>
+          <article class="training__card">
+            <div class="placeholder-media" aria-hidden="true">[Photo — competitive session]</div>
+            <h3>Competitive Mindset</h3>
+            <p>The mentality to compete, adapt and keep improving under pressure.</p>
+          </article>
+        </div>
+        <p class="training__closing">Every session is designed to make you better. Not just fitter.</p>
+        <a class="link-anchor" href="#journey">See how it works</a>
+      </section>
+
+      <!-- 3. How It Works -->
+      <section class="journey" id="journey">
+        <h2 class="section-title section-title--light">Your Player's Journey</h2>
+        <ol class="stepper">
+          <li class="stepper__step">
+            <span class="stepper__number">1</span>
+            <h3>Detect</h3>
+            <p>We identify real potential, not just current ability.</p>
+          </li>
+          <li class="stepper__step">
+            <span class="stepper__number">2</span>
+            <h3>Train</h3>
+            <p>Structured sessions built around the player's actual needs.</p>
+          </li>
+          <li class="stepper__step">
+            <span class="stepper__number">3</span>
+            <h3>Evaluate</h3>
+            <p>Honest, ongoing assessment of progress and gaps.</p>
+          </li>
+          <li class="stepper__step">
+            <span class="stepper__number">4</span>
+            <h3>Develop</h3>
+            <p>Targeted work on the areas that unlock the next level.</p>
+          </li>
+          <li class="stepper__step">
+            <span class="stepper__number">5</span>
+            <h3>Profile</h3>
+            <p>A clear, evidence-based record of who the player is on the pitch.</p>
+          </li>
+          <li class="stepper__step">
+            <span class="stepper__number">6</span>
+            <h3>Present</h3>
+            <p>The profile is shared with our verified international network.</p>
+          </li>
+          <li class="stepper__step">
+            <span class="stepper__number">7</span>
+            <h3>Follow Up</h3>
+            <p>We stay involved after the introduction, not just before it.</p>
+          </li>
+        </ol>
+        <div class="journey__closing">
+          <p>The process is the promise.</p>
+          <a class="btn btn--filled" href="#contact">Book a Training</a>
+        </div>
+      </section>
+
+      <!-- 4. Scouting -->
+      <section class="scouting" id="scouting">
+        <h2 class="section-title">Beyond Training — International Exposure</h2>
+        <p class="scouting__intro">
+          Scouting at La Cantera is not an agency service — it's the natural next step for players who
+          have put in the work. Through relationships built over two decades, we present documented,
+          evaluated players to clubs and scouts abroad.
+        </p>
+        <div class="scouting__map placeholder-media" aria-hidden="true">
+          [Map or grid — verified countries / regions with active contacts]
+        </div>
+        <div class="scouting__stats">
+          <div class="stat-block">
+            <span class="stat-block__number">[N]</span>
+            <span class="stat-block__label">Players Presented</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-block__number">[N]</span>
+            <span class="stat-block__label">Countries with Contacts</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-block__number">[N]</span>
+            <span class="stat-block__label">Years of Active Network</span>
+          </div>
+        </div>
+        <p class="scouting__disclaimer">We open doors. You walk through them.</p>
+        <a class="btn btn--filled" href="#contact">Start your journey</a>
+      </section>
+
+      <!-- 5. Why La Cantera -->
+      <section class="why" id="why">
+        <h2 class="section-title">Why La Cantera</h2>
+        <div class="why__stats">
+          <div class="stat-block">
+            <span class="stat-block__number">20+</span>
+            <span class="stat-block__label">Years of Experience</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-block__number">[N]</span>
+            <span class="stat-block__label">Players Developed</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-block__number">[N]</span>
+            <span class="stat-block__label">Countries Reached</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-block__number">[N]</span>
+            <span class="stat-block__label">Championships</span>
+          </div>
+        </div>
+
+        <div class="why__coaches">
+          <article class="coach-card">
+            <div class="placeholder-media placeholder-media--portrait" aria-hidden="true">
+              [Coach photo]
+            </div>
+            <h3>[Coach Name]</h3>
+            <p class="coach-card__role">[Role]</p>
+            <p>[One line on background and coaching experience.]</p>
+          </article>
+          <article class="coach-card">
+            <div class="placeholder-media placeholder-media--portrait" aria-hidden="true">
+              [Coach photo]
+            </div>
+            <h3>[Coach Name]</h3>
+            <p class="coach-card__role">[Role]</p>
+            <p>[One line on background and coaching experience.]</p>
+          </article>
+        </div>
+
+        <div class="why__language">
+          <h3>Our coaches speak your language — literally.</h3>
+          <p>
+            Clear, direct communication with the player and the family, at every step of the process.
+          </p>
+        </div>
+
+        <div class="why__logos placeholder-media" aria-hidden="true">
+          [Verified logos / mentions — clubs, championships, institutions]
+        </div>
+      </section>
+
+      <!-- 6. Proof -->
+      <section class="proof" id="proof">
+        <h2 class="section-title">Player Stories</h2>
+        <div class="proof__grid">
+          <article class="proof-card">
+            <div class="placeholder-media" aria-hidden="true">[Player photo or video thumbnail]</div>
+            <h3>[Player Name], [Age] — [City of Origin]</h3>
+            <p class="proof-card__result">[Result or key moment of the process.]</p>
+            <blockquote>"[Specific quote about a concrete part of the process.]"</blockquote>
+          </article>
+          <article class="proof-card">
+            <div class="placeholder-media" aria-hidden="true">[Player photo or video thumbnail]</div>
+            <h3>[Player Name], [Age] — [City of Origin]</h3>
+            <p class="proof-card__result">[Result or key moment of the process.]</p>
+            <blockquote>"[Specific quote about a concrete part of the process.]"</blockquote>
+          </article>
+        </div>
+        <a class="link-anchor" href="#contact">Discover our players</a>
+      </section>
+
+      <!-- 7. Final CTA -->
+      <section class="cta-final" id="book">
+        <h2>The first step is a training session.</h2>
+        <p>No commitments. No evaluations. Just football.</p>
+        <div class="cta-final__ctas">
+          <a class="btn btn--filled" href="#contact">Book a Training</a>
+          <a class="btn btn--ghost" href="#contact">Talk to us</a>
+        </div>
+        <p class="cta-final__response">We respond within 24 hours</p>
+      </section>
+    </main>
+
+    <!-- 8. Footer -->
+    <footer class="footer" id="contact">
+      <div class="footer__logo">La Cantera</div>
+      <nav class="footer__nav">
+        <a href="#top">Home</a>
+        <a href="#training">Training</a>
+        <a href="#journey">Player Development</a>
+        <a href="#scouting">Scouting</a>
+        <a href="#why">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer__contact">
+        <a href="mailto:[email]">[email]</a>
+        <a href="tel:[phone]">[WhatsApp / phone]</a>
+        <span>[City / operating region]</span>
+      </div>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">[Instagram]</a>
+        <a href="#" aria-label="YouTube">[YouTube]</a>
+      </div>
+      <p class="footer__legal">
+        © <span id="year"></span> La Cantera London F.C. All rights reserved. · Privacy Policy
+      </p>
+    </footer>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

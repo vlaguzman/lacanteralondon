@@ -18,8 +18,12 @@ Hostinger's basic plan is static shared hosting — it does not run a Node serve
 
 ## Architecture
 
-- `index.html` — the single page entry point Vite builds from
-- `src/main.js` — page content/behavior, mounted into `#app`
-- `src/style.css` — global styles
+- `index.html` — all page content and markup, section by section (hero, training, journey/how-it-works, scouting, why, proof, final CTA, footer). Static HTML on purpose: no JS required to render content, better SEO/first paint.
+- `src/main.js` — interactivity only (navbar solid-on-scroll, mobile menu toggle, footer year). Does not generate markup.
+- `src/style.css` — design tokens (`:root` custom properties for the brand palette and type scale) followed by section-by-section styles.
 
-There is no routing, no backend, and no build-time content source (CMS/markdown) — content lives directly in `src/main.js`/`index.html`. If the page grows multiple sections or reusable pieces, split markup into small functions/modules under `src/` rather than introducing a framework.
+There is no routing, no backend, and no build-time content source (CMS/markdown). If the page grows enough sections to make one `index.html` unwieldy, split markup into includes/partials at build time (e.g. `vite-plugin-html`) rather than introducing a JS framework.
+
+## Content placeholders
+
+Several pieces of on-page content are intentionally left as bracketed placeholders (`[N]`, `[Coach Name]`, etc.) rather than invented — stats, testimonials, coach bios, contact details, logos, and the hero video/photos need real, verifiable content per the brand brief (`accuracy over polish`). Search `index.html` for `[` to find all of them before launch.
