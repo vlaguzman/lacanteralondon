@@ -142,6 +142,7 @@
       }
 
       .surface {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -171,20 +172,22 @@
         color: var(--gold);
       }
 
-      .surface-label {
-        position: relative;
-      }
-
       .surface-label::after {
         content: attr(data-label);
         position: absolute;
-        bottom: -1.75rem;
-        left: 0;
+        bottom: 0.75rem;
+        left: 0.75rem;
         font-family: var(--font-mono);
         font-size: 0.7rem;
         text-transform: uppercase;
         letter-spacing: 0.08em;
         color: var(--mist);
+      }
+
+      .surface--forest.surface-label::after,
+      .surface--night.surface-label::after,
+      .surface--gold-accent.surface-label::after {
+        color: rgba(245, 240, 232, 0.7);
       }
 
       @media (min-width: 720px) {
