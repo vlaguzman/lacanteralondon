@@ -29,7 +29,9 @@ There is no routing, no backend, and no build-time content source (CMS/markdown)
 
 ## Content placeholders
 
-Several pieces of on-page content are intentionally left as bracketed placeholders (`[N]`, `[Coach Name]`, etc.) rather than invented — stats, testimonials, coach bios, contact details, and the hero video need real, verifiable content per the brand brief (`accuracy over polish`). Search `index.html` for `[` to find all of them before launch.
+Several pieces of on-page content are intentionally left as bracketed placeholders (`[N]`, `[Coach Name]`, etc.) rather than invented — stats, testimonials, coach bios, and contact details still need real, verifiable content per the brand brief (`accuracy over polish`). Search `index.html` for `[` to find all of them before launch.
+
+Hero background video is in place: `public/videos/hero-training.mp4` (transcoded from a 50MB 4K/60fps source down to ~6.7MB at 1080p/30fps, H.264, no audio track, `+faststart`) with `public/images/hero-poster.jpg` as the fallback poster. Re-transcode any future replacement video the same way — the original 4K files supplied are far too heavy for a hero background (`ffmpeg -i in.mp4 -vf "scale=1920:-2,fps=30" -c:v libx264 -preset slow -crf 26 -an -movflags +faststart out.mp4`).
 
 Real photos already placed (`public/images/`, resized/compressed with `sharp`, ~1000px wide):
 - `training-positional.jpeg` — Positional Tactics card
