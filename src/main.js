@@ -46,6 +46,11 @@ function applyLanguage(lang) {
     if (value !== undefined) el.setAttribute('aria-label', value)
   })
 
+  document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
+    const value = dict[el.getAttribute('data-i18n-alt')]
+    if (value !== undefined) el.setAttribute('alt', value)
+  })
+
   if (metaDescription) {
     const value = dict[metaDescription.getAttribute('data-i18n-content')]
     if (value !== undefined) metaDescription.setAttribute('content', value)

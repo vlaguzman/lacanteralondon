@@ -25,6 +25,7 @@ export const translations = {
     'training.card2.photo': '[Photo — tactical session]',
     'training.card2.title': 'Positional Tactics',
     'training.card2.desc': 'Reading the game, decision-making and understanding your role on the pitch.',
+    'training.card2.alt': 'La Cantera players training on a full-size pitch',
     'training.card3.photo': '[Photo — physical session]',
     'training.card3.title': 'Physical Performance',
     'training.card3.desc': 'Strength, speed and recovery built for the demands of the modern game.',
@@ -74,7 +75,10 @@ export const translations = {
     'why.language_title': 'Our coaches speak your language — literally.',
     'why.language_desc':
       'Clear, direct communication with the player and the family, at every step of the process.',
-    'why.logos': '[Verified logos / mentions — clubs, championships, institutions]',
+    'why.trophies_title': "Championships We've Won",
+    'why.trophy1_alt': 'La Cantera team and coaching staff celebrating with the Summer Super League trophy',
+    'why.trophy2_alt': 'La Cantera players celebrating a Summer Super League championship win',
+    'why.trophy3_alt': 'La Cantera players wearing the club jersey celebrating with a championship trophy',
 
     'proof.title': 'Player Stories',
     'proof.photo': '[Player photo or video thumbnail]',
@@ -124,6 +128,7 @@ export const translations = {
     'training.card2.photo': '[Foto — sesión táctica]',
     'training.card2.title': 'Táctica posicional',
     'training.card2.desc': 'Lectura del juego, toma de decisiones y comprensión de tu rol en la cancha.',
+    'training.card2.alt': 'Jugadores de La Cantera entrenando en una cancha completa',
     'training.card3.photo': '[Foto — sesión física]',
     'training.card3.title': 'Rendimiento físico',
     'training.card3.desc': 'Fuerza, velocidad y recuperación pensadas para las exigencias del fútbol moderno.',
@@ -173,7 +178,10 @@ export const translations = {
     'why.language_title': 'Nuestros entrenadores hablan tu idioma — literalmente.',
     'why.language_desc':
       'Comunicación clara y directa con el jugador y la familia, en cada etapa del proceso.',
-    'why.logos': '[Logos o menciones verificadas — clubes, campeonatos, instituciones]',
+    'why.trophies_title': 'Campeonatos que ganamos',
+    'why.trophy1_alt': 'Equipo y cuerpo técnico de La Cantera celebrando con el trofeo de la Summer Super League',
+    'why.trophy2_alt': 'Jugadores de La Cantera celebrando un campeonato de la Summer Super League',
+    'why.trophy3_alt': 'Jugadores de La Cantera con la camiseta del club celebrando con un trofeo',
 
     'proof.title': 'Historias de jugadores',
     'proof.photo': '[Foto del jugador o miniatura de video]',

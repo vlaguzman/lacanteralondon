@@ -29,4 +29,10 @@ There is no routing, no backend, and no build-time content source (CMS/markdown)
 
 ## Content placeholders
 
-Several pieces of on-page content are intentionally left as bracketed placeholders (`[N]`, `[Coach Name]`, etc.) rather than invented — stats, testimonials, coach bios, contact details, logos, and the hero video/photos need real, verifiable content per the brand brief (`accuracy over polish`). Search `index.html` for `[` to find all of them before launch.
+Several pieces of on-page content are intentionally left as bracketed placeholders (`[N]`, `[Coach Name]`, etc.) rather than invented — stats, testimonials, coach bios, contact details, and the hero video need real, verifiable content per the brand brief (`accuracy over polish`). Search `index.html` for `[` to find all of them before launch.
+
+Real photos already placed (`public/images/`, resized/compressed with `sharp`, ~1000px wide):
+- `training-positional.jpeg` — Positional Tactics card
+- `trophy-1.jpeg`, `trophy-2.jpeg`, `trophy-3-la-cantera.jpeg` — "Championships We've Won" gallery in Why La Cantera
+
+Two supplied training photos showing minors (girls' team drill, coach with two kids) were deliberately **not** used — no confirmed parental image-consent for public use. Check with the client before adding any photo with a minor's face.

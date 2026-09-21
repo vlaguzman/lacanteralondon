@@ -400,6 +400,12 @@ ol {
   grid-template-columns: 1fr;
 }
 
+.training__photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
 .training__card h3 {
   font-size: var(--fs-h4);
   margin-top: 1rem;
@@ -574,8 +580,31 @@ ol {
   margin-top: 0.75rem;
 }
 
-.why__logos {
-  aspect-ratio: 16 / 5;
+.why__trophies {
+  text-align: center;
+}
+
+.why__trophies h3 {
+  font-size: var(--fs-h4);
+  margin-bottom: 1.5rem;
+}
+
+.why__trophies-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.why__trophies-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+@media (min-width: 640px) {
+  .why__trophies-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: 640px) {
