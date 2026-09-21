@@ -78,10 +78,29 @@
 
       /* Hero */
       .hero {
-        background: var(--forest);
+        position: relative;
         color: var(--ivory);
-        padding: 5rem 0 4rem;
+        padding: 6rem 0 5rem;
         border-bottom: none;
+        overflow: hidden;
+      }
+
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(17, 17, 17, 0.7);
+      }
+
+      .hero-content {
+        position: relative;
       }
 
       .hero .eyebrow {
@@ -103,18 +122,6 @@
         max-width: 42ch;
         margin-top: 1rem;
         color: rgba(245, 240, 232, 0.75);
-      }
-
-      .badge {
-        display: inline-block;
-        margin-top: 1.5rem;
-        padding: 0.35rem 0.75rem;
-        border: 1px solid var(--gold);
-        color: var(--gold);
-        font-family: var(--font-mono);
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
       }
 
       /* Concept */
@@ -356,6 +363,101 @@
         }
       }
 
+      /* Applications */
+      .mockups {
+        margin-top: 2.5rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+      }
+
+      .mockup {
+        position: relative;
+        aspect-ratio: 4 / 3;
+        border-radius: 4px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mockup img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .mockup-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(17, 17, 17, 0.5);
+      }
+
+      .mockup-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .mockup-caption {
+        position: absolute;
+        bottom: 0.75rem;
+        left: 0.75rem;
+        z-index: 2;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: rgba(245, 240, 232, 0.9);
+      }
+
+      .mockup-caption--dark {
+        color: rgba(28, 28, 28, 0.6);
+      }
+
+      @media (min-width: 720px) {
+        .mockups {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      .avatar-row {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 4px;
+        background: var(--forest);
+        padding: 1.25rem 1.5rem;
+        color: var(--ivory);
+      }
+
+      .avatar-circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.5rem;
+        height: 3.5rem;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: rgba(245, 240, 232, 0.12);
+        color: var(--gold);
+      }
+
+      .avatar-circle .mark {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      .avatar-row span {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        opacity: 0.8;
+      }
+
       footer {
         background: var(--forest);
         color: var(--ivory);
@@ -384,7 +486,7 @@
   <body>
     <svg width="0" height="0" style="position: absolute" aria-hidden="true">
       <defs>
-        <symbol id="mark-cortada" viewBox="0 0 100 100">
+        <symbol id="mark-la-cantera" viewBox="0 0 100 100">
           <path
             d="M94.433 61.906 L82.527 82.527 L61.906 94.433 L38.094 94.433 L17.473 82.527 L5.567 61.906 L5.567 38.094 L17.473 17.473 L38.094 5.567 L61.906 5.567 L82.527 17.473 L94.433 38.094 L73.18 40.635 A25 25 0 1 0 73.18 59.365 Z"
           />
@@ -393,15 +495,16 @@
     </svg>
 
     <section class="hero">
-      <div class="wrap">
-        <p class="eyebrow">Identidad visual · Propuesta 01 · Recomendada</p>
-        <svg class="mark" fill="currentColor"><use href="#mark-cortada" /></svg>
+      <img class="hero-bg" src="/brand-manual/photos/training.jpg" alt="" />
+      <div class="hero-overlay"></div>
+      <div class="wrap hero-content">
+        <p class="eyebrow">Identidad visual</p>
+        <svg class="mark" fill="currentColor"><use href="#mark-la-cantera" /></svg>
         <h1>El talento<br />toma forma.</h1>
         <p>
           Una C tallada, abierta hacia adelante. Sólida como el proceso. Lista para el pecho de un
           jugador y para una ficha de scout.
         </p>
-        <span class="badge">01 · Cortada</span>
       </div>
     </section>
 
@@ -432,8 +535,7 @@
 
     <section>
       <div class="wrap">
-        <p class="eyebrow eyebrow--dark">01 · Cortada</p>
-        <h2 style="margin-top: 0.5rem; color: var(--forest); font-size: 2.25rem">Símbolo</h2>
+        <h2 style="color: var(--forest); font-size: 2.25rem">Símbolo</h2>
         <p style="margin-top: 0.5rem; max-width: 60ch; color: var(--mist)">
           El contorno es el trabajo. Doce cortes. Un interior amplio. Apertura al este. Un símbolo
           circular, pero no un círculo: el perímetro está facetado como un bloque tallado. El
@@ -444,7 +546,7 @@
         <div class="showcase">
           <div class="surface surface--ivory surface-label" data-label="Marca">
             <span class="lockup">
-              <svg class="mark" fill="currentColor"><use href="#mark-cortada" /></svg>
+              <svg class="mark" fill="currentColor"><use href="#mark-la-cantera" /></svg>
               <span>
                 <span class="lockup-word">LA CANTERA</span>
                 <span class="lockup-rule"></span>
@@ -454,7 +556,7 @@
           </div>
           <div class="surface surface--forest surface-label" data-label="Inversa">
             <span class="lockup">
-              <svg class="mark" fill="currentColor"><use href="#mark-cortada" /></svg>
+              <svg class="mark" fill="currentColor"><use href="#mark-la-cantera" /></svg>
               <span>
                 <span class="lockup-word">LA CANTERA</span>
                 <span class="lockup-rule"></span>
@@ -464,12 +566,12 @@
           </div>
           <div class="surface surface--night surface-label" data-label="Nocturna">
             <svg class="mark" style="width: 4rem; height: 4rem" fill="currentColor">
-              <use href="#mark-cortada" />
+              <use href="#mark-la-cantera" />
             </svg>
           </div>
           <div class="surface surface--gold-accent surface-label" data-label="Acento">
             <svg class="mark" style="width: 4rem; height: 4rem" fill="currentColor">
-              <use href="#mark-cortada" />
+              <use href="#mark-la-cantera" />
             </svg>
           </div>
         </div>
@@ -498,19 +600,19 @@
         <p class="eyebrow eyebrow--dark" style="margin-top: 3rem">Escala mínima</p>
         <div class="sizes">
           <div>
-            <svg style="width: 96px; height: 96px" fill="currentColor"><use href="#mark-cortada" /></svg>
+            <svg style="width: 96px; height: 96px" fill="currentColor"><use href="#mark-la-cantera" /></svg>
             <span>96 px</span>
           </div>
           <div>
-            <svg style="width: 56px; height: 56px" fill="currentColor"><use href="#mark-cortada" /></svg>
+            <svg style="width: 56px; height: 56px" fill="currentColor"><use href="#mark-la-cantera" /></svg>
             <span>56 px</span>
           </div>
           <div>
-            <svg style="width: 32px; height: 32px" fill="currentColor"><use href="#mark-cortada" /></svg>
+            <svg style="width: 32px; height: 32px" fill="currentColor"><use href="#mark-la-cantera" /></svg>
             <span>32 px</span>
           </div>
           <div>
-            <svg style="width: 20px; height: 20px" fill="currentColor"><use href="#mark-cortada" /></svg>
+            <svg style="width: 20px; height: 20px" fill="currentColor"><use href="#mark-la-cantera" /></svg>
             <span>20 px</span>
           </div>
         </div>
@@ -544,7 +646,7 @@
       </div>
     </section>
 
-    <section style="border-bottom: none">
+    <section>
       <div class="wrap">
         <p class="eyebrow eyebrow--dark">Tipografía</p>
         <div class="type-grid">
@@ -568,10 +670,77 @@
       </div>
     </section>
 
+    <section style="border-bottom: none">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--dark">En contexto</p>
+        <h2 style="margin-top: 0.5rem; color: var(--forest); font-size: 2.25rem">
+          Una tinta. Cualquier superficie.
+        </h2>
+        <p style="margin-top: 0.5rem; max-width: 55ch; color: var(--mist)">
+          Prioridad a la versión de un solo color. El oro aparece como acento, nunca como metal.
+        </p>
+
+        <div class="mockups">
+          <figure class="mockup">
+            <img src="/brand-manual/photos/training.jpg" alt="" />
+            <div class="mockup-overlay"></div>
+            <div class="mockup-content">
+              <span class="lockup" style="color: var(--ivory)">
+                <svg class="mark" fill="currentColor"><use href="#mark-la-cantera" /></svg>
+                <span>
+                  <span class="lockup-word">LA CANTERA</span>
+                  <span class="lockup-rule"></span>
+                  <span class="lockup-london">London</span>
+                </span>
+              </span>
+            </div>
+            <figcaption class="mockup-caption">Documental</figcaption>
+          </figure>
+
+          <figure class="mockup">
+            <img src="/brand-manual/photos/pitch.jpg" alt="" />
+            <div class="mockup-overlay"></div>
+            <svg class="mark mockup-content" style="width: 5rem; height: 5rem; color: var(--gold)" fill="currentColor">
+              <use href="#mark-la-cantera" />
+            </svg>
+            <figcaption class="mockup-caption">Cancha</figcaption>
+          </figure>
+
+          <figure class="mockup">
+            <img src="/brand-manual/photos/jersey.jpg" alt="" />
+            <svg class="mark mockup-content" style="width: 6rem; height: 6rem; color: var(--gold)" fill="currentColor">
+              <use href="#mark-la-cantera" />
+            </svg>
+            <figcaption class="mockup-caption">Pecho</figcaption>
+          </figure>
+
+          <figure class="mockup">
+            <img src="/brand-manual/photos/paper.jpg" alt="" />
+            <span class="lockup lockup--stacked mockup-content" style="color: var(--forest)">
+              <svg class="mark" fill="currentColor"><use href="#mark-la-cantera" /></svg>
+              <span>
+                <span class="lockup-word">LA CANTERA</span>
+                <span class="lockup-rule" style="margin-left: auto; margin-right: auto"></span>
+                <span class="lockup-london">London</span>
+              </span>
+            </span>
+            <figcaption class="mockup-caption mockup-caption--dark">Papelería</figcaption>
+          </figure>
+        </div>
+
+        <div class="avatar-row">
+          <span class="avatar-circle">
+            <svg class="mark" fill="currentColor"><use href="#mark-la-cantera" /></svg>
+          </span>
+          <span>Avatar · ícono</span>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <div class="wrap">
         <span class="lockup lockup--stacked">
-          <svg class="mark" fill="currentColor"><use href="#mark-cortada" /></svg>
+          <svg class="mark" fill="currentColor"><use href="#mark-la-cantera" /></svg>
           <span>
             <span class="lockup-word">LA CANTERA</span>
             <span class="lockup-rule" style="margin-left: auto; margin-right: auto"></span>
